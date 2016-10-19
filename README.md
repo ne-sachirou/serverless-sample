@@ -1,4 +1,4 @@
-Serverless Framworkサンプル
+Serverless Frameworkサンプル
 ==
 當文書の[Serverless](https://serverless.com/)のver.は1.0.2である。
 
@@ -7,9 +7,33 @@ Serverless Framworkサンプル
 1. AWSアカウント
 2. 最新のNode.jsとNPM
 
+Serverless Frameworkとは?
+--
+Serverless Frameworkは、FaaSを中心にしてserverlessアーキテクチャーでサービスを作るフレームワーク。
+
+### Serverlessアーキテクチャー、若しくはFaaS (Function as a Service)
+FaaSに於ける函數 (function) とは、一つのイベントを受け取り一つのレスポンスを返すプロセスである。イベントにはHTTPアクセス、タイマー、DBの更新<ruby><rb>等</rb><rp>[</rp><rt>など</rt><rp>]</rp></ruby>がある。一つのイベントが起きた時に一つのプロセスが起動し、処理を行った後にそのプロセスは消える、やうに見なせる。入力、入力に對する処理、出力のみを考へればよい。どのやうに實行環境が用意されるのか、プロセスはどう起動するのか、どう終了するのか、イベント數に對してどうスケールするのか等は一切考へなくてよい、FaaSプロバイダーが全てマネージする。PaaS (Platform as a Service) と違ひ、繼續して動作するアプリケーションと云ふ存在を考慮しなくてよい。
+代表的なFaaSプロバイダには、
+
+- AWS Lambda
+- Google CloudFunctions
+- Azure Functions
+- IBM OpenWhisk
+
+がある。Serverless Frameworkは上記4つに対応してゐる。
+
+### Serverless Framework
+FaaSを扱ふフレームワークはServerless Frameworkや[Apex](http://apex.run/)が有名である。Apex等がFaaSを管理する事に集中してゐるのに比べて、Serverless FrameworkはFaaSだけでなくイベントのソースや周邊のリソースもまとめて管理し、サービス全體を作り上げられるフレームワークである事が今の所特徴になってゐる。
+
+[2016-10-12にv1.0が出た。](https://serverless.com/blog/releasing-serverless-framework-v1-and-fundraising/)
+
 準備
 --
-### Serverless Framworkを安裝する
+やってゆく。
+
+以下では処理の實裝にNode.jsを使ふが、Serverless FrameworkはAWS Lambdaに對してNode.js、Python、Java (Maven)、Java (Gradle)、Scalaをデプロイできる。
+
+### Serverless Frameworkを<ruby><rb>安裝</rb><rp>[</rp><rt>インストール</rt><rp>]</rp></ruby>する
 ```sh
 npm install -g serverless
 serverless -v
@@ -204,4 +228,12 @@ x-amzn-RequestId: 云々
     },
     "message": "Go Serverless v1.0! Your function executed successfully!"
 }
+```
+
+御掃除
+--
+作ったものを消す。
+
+```sh
+sls remove
 ```
