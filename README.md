@@ -122,7 +122,7 @@ sls invoke -f hello -s dev
 }
 ```
 
-### API Getewayをイベントに設定する
+### API Gatewayをイベントに設定する
 serverless.ymlのfunctionsの項にeventを追記する。
 
 ```yaml
@@ -160,7 +160,7 @@ functions:
   serverless-sample-dev-hello: arn:aws:lambda:ap-northeast-1:云々:function:serverless-sample-dev-hello
 ```
 
-先程に加えてAPI Gatewayにdev-serverless-sampleが作成されてゐる。httpでAPI Getewayを呼ぶとJSONが返される。
+先程に加えてAPI Gatewayにdev-serverless-sampleが作成されてゐる。httpでAPI Gatewayを呼ぶとJSONが返される。
 
 ```sh
 http https://云々.execute-api.ap-northeast-1.amazonaws.com/dev/momonga
