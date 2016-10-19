@@ -1,0 +1,6 @@
+
+# Created by https://www.gitignore.io/api/serverless
+
+### Serverless ###
+# Ignore build directory
+.serverless
