@@ -23,7 +23,7 @@ FaaSに於ける函數 (function) とは、一つのイベントを受け取り�
 がある。Serverless Frameworkは上記4つに対応してゐる。
 
 ### Serverless Framework
-FaaSを扱ふフレームワークはServerless Frameworkや[Apex](http://apex.run/)が有名である。Apex等がFaaSを管理する事に集中してゐるのに比べて、Serverless FrameworkはFaaSだけでなくイベントのソースや周邊のリソースもまとめて管理し、サービス全體を作り上げられるフレームワークである事が今の所特徴になってゐる。
+FaaSを扱ふフレームワークはServerless Frameworkや[Apex](http://apex.run/)が有名である。Apex等がFaaSを管理する事に集中してゐるのに比べて、Serverless FrameworkはFaaSだけでなくイベントのソースや周邊のリソースもまとめて管理し、サービス全體を作り上げられるフルスタックなフレームワークである事が今の所特徴になってゐる。
 
 [2016-10-12にv1.0が出た。](https://serverless.com/blog/releasing-serverless-framework-v1-and-fundraising/)
 
