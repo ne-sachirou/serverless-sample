@@ -9,10 +9,12 @@ Serverless Frameworkサンプル
 
 Serverless Frameworkとは?
 --
+<a href="https://speakerdeck.com/ne_sachirou/serverless-frameworkwoben-fan-huan-jing-nitou-ru-surutameni"><img src="./what_is_serverless_framework.png" alt="Serverless Frameworkを本番環境に投入するために"/></a>
+
 Serverless Frameworkは、FaaSを中心にしてserverlessアーキテクチャーでサービスを作るフレームワーク。
 
 ### Serverlessアーキテクチャー、若しくはFaaS (Function as a Service)
-FaaSに於ける函數 (function) とは、一つのイベントを受け取り一つのレスポンスを返すプロセスである。イベントにはHTTPアクセス、タイマー、DBの更新<ruby><rb>等</rb><rp>[</rp><rt>など</rt><rp>]</rp></ruby>がある。一つのイベントが起きた時に一つのプロセスが起動し、処理を行った後にそのプロセスは消える、やうに見なせる。入力、入力に對する処理、出力のみを考へればよい。どのやうに實行環境が用意されるのか、プロセスはどう起動するのか、どう終了するのか、イベント數に對してどうスケールするのか等は一切考へなくてよい、FaaSプロバイダーが全てマネージする。PaaS (Platform as a Service) と違ひ、繼續して動作するアプリケーションと云ふ存在を考慮しなくてよい。
+FaaSに於けるFunction (函數/働き) とは、一つのイベントを受け取り狀態を變更し一つのレスポンスを返すプロセスである。イベントにはHTTPアクセス、タイマー、DBの更新<ruby><rb>等</rb><rp>[</rp><rt>など</rt><rp>]</rp></ruby>がある。一つのイベントが起きた時に一つのプロセスが起動し、処理を行った後にそのプロセスは消える、やうに見なせる。入力、入力に對する処理、出力のみを考へればよい。どのやうに實行環境が用意されるのか、プロセスはどう起動するのか、どう終了するのか、イベント數に對してどうスケールするのか等は一切考へなくてよい、FaaSプロバイダーが全てマネージする。PaaS (Platform as a Service) と違ひ、繼續して動作するアプリケーションと云ふ存在を考慮しなくてよい。
 代表的なFaaSプロバイダには、
 
 - AWS Lambda
@@ -23,7 +25,9 @@ FaaSに於ける函數 (function) とは、一つのイベントを受け取り�
 がある。Serverless Frameworkは上記4つに対応してゐる。
 
 ### Serverless Framework
-FaaSを扱ふフレームワークはServerless Frameworkや[Apex](http://apex.run/)や[hapi.js](http://hapijs.com/)が有名である。Apex等がFaaSを管理する事に集中してゐるのに比べて、Serverless FrameworkはFaaSだけでなくイベントのソースや周邊のリソースもまとめて管理し、サービス全體を作り上げられるフルスタックなフレームワークである事が今の所特徴になってゐる。
+FaaSに對して、Function/イベント發火元/狀態を保持するサービスを統合してデプロイする道具。
+
+FaaSを扱ふフレームワークはServerless Frameworkや[Apex](http://apex.run/)が有名である。Apex等がFaaSを管理する事に集中してゐるのに比べて、Serverless FrameworkはFaaSだけでなくイベントのソースや周邊のリソースもまとめて管理し、サービス全體を作り上げられるフルスタックなフレームワークである事が今の所特徴になってゐる。
 
 [2016-10-12にv1.0が出た。](https://serverless.com/blog/releasing-serverless-framework-v1-and-fundraising/)
 
